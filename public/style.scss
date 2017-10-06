@@ -1,0 +1,117 @@
+
+$white: #FFF;
+$black: #333;
+$grey: #EEE;
+$blue: #7D6BF8;
+$background-color: #F1F1F1;
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+
+
+body {
+  font-family: 'Titillium Web';
+  background-color: $background-color;
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  @media (max-width: 430px) {
+    max-width: 90%;
+  }
+}
+
+.flex-row {
+	display: flex;
+}
+
+.flex-center {
+	justify-content: center;
+}
+
+.row-margin {
+  margin: 20px 0;
+}
+
+.panel {
+  background-color: $white;
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  margin-top: 20px;
+  .title {
+    color: $blue;
+    text-align: center;
+  }
+}
+
+.button {
+  display: inline;
+	background-color: $white;
+  border: none;
+  font-size: .8rem;
+	cursor: pointer;
+	padding: 5px 8px;
+  transition: all .15s;
+	&:hover {
+		background-color: rgba($blue, 0.25);
+	}
+  &:focus {
+    outline: none;
+  }
+}
+
+.new-todo {
+  input {
+    border: none;
+    border-bottom: 1px solid $black;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba($black, .5);
+      font-family: 'Titillium Web';
+    }
+  }
+  .button i {
+    margin-right: 0;
+  }
+}
+
+.todo {
+  border-left: 3px solid $blue;
+  border-bottom: 1px solid $grey;
+  padding: 8px 0 8px 3px;
+  margin-bottom: 2px;
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  &.todo-completed {
+    color: rgba($black, .5);
+    border-left-color: rgba($blue, .5);
+    p {
+      text-decoration: line-through;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .col-2 {
+    max-width: 200px;
+  }
+  .col-3 {
+    margin-left: auto;
+  }
+  i.blue {
+    color: $blue;
+  }
+}
+
+.checkbox {
+  .checkbox-input {
+    display:none;
+  }
+  .checkbox-input + .checkbox-label span {
+    margin: 0 5px 0 3px;
+  }
+}

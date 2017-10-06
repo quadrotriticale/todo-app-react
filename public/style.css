@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700");
+body {
+  font-family: 'Titillium Web';
+  background-color: #F1F1F1; }
+
+.container {
+  max-width: 300px;
+  margin: 0 auto; }
+  @media (max-width: 430px) {
+    .container {
+      max-width: 90%; } }
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.row-margin {
+  margin: 20px 0; }
+
+.panel {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  margin-top: 20px; }
+  .panel .title {
+    color: #7D6BF8;
+    text-align: center; }
+
+.button {
+  display: inline;
+  background-color: #FFF;
+  border: none;
+  font-size: .8rem;
+  cursor: pointer;
+  padding: 5px 8px;
+  -webkit-transition: all .15s;
+  transition: all .15s; }
+  .button:hover {
+    background-color: rgba(125, 107, 248, 0.25); }
+  .button:focus {
+    outline: none; }
+
+.new-todo input {
+  border: none;
+  border-bottom: 1px solid #333; }
+  .new-todo input:focus {
+    outline: none; }
+  .new-todo input::-webkit-input-placeholder {
+    color: rgba(51, 51, 51, 0.5);
+    font-family: 'Titillium Web'; }
+  .new-todo input:-ms-input-placeholder {
+    color: rgba(51, 51, 51, 0.5);
+    font-family: 'Titillium Web'; }
+  .new-todo input::placeholder {
+    color: rgba(51, 51, 51, 0.5);
+    font-family: 'Titillium Web'; }
+.new-todo .button i {
+  margin-right: 0; }
+
+.todo {
+  border-left: 3px solid #7D6BF8;
+  border-bottom: 1px solid #EEE;
+  padding: 8px 0 8px 3px;
+  margin-bottom: 2px; }
+  .todo:last-child {
+    border-bottom: none;
+    margin-bottom: 0; }
+  .todo.todo-completed {
+    color: rgba(51, 51, 51, 0.5);
+    border-left-color: rgba(125, 107, 248, 0.5); }
+    .todo.todo-completed p {
+      text-decoration: line-through; }
+  .todo p {
+    margin: 0; }
+  .todo .col-2 {
+    max-width: 200px; }
+  .todo .col-3 {
+    margin-left: auto; }
+  .todo i.blue {
+    color: #7D6BF8; }
+
+.checkbox .checkbox-input {
+  display: none; }
+.checkbox .checkbox-input + .checkbox-label span {
+  margin: 0 5px 0 3px; }
